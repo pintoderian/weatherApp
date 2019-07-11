@@ -7,6 +7,18 @@
     border-radius: 5px;
 }
 
+.WeatherLocationCont .btn{
+    margin-top: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    background: #f77206;
+    color: #fff;
+    border-radius: 2px;
+    border: 1px solid #FF5722;
+    outline: none;
+}
+
 .LocationCont{
     text-align: center;
     width: 100%;

@@ -18,9 +18,9 @@ const data2 = {
     wind: '19 m/s',
 };
 
-class WeatherLocation extends Component{
+class WeatherLocation extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
             city: 'Ecuador, Guayaquil!',
@@ -42,7 +42,7 @@ class WeatherLocation extends Component{
             <div className="WeatherLocationCont">
                 <Location city={city}></Location>
                 <WeatherData data={data}></WeatherData>
-                <button onClick={this.handleUpdateClick}>Actualizar</button>
+                <button className="btn" onClick={this.handleUpdateClick}>Actualizar</button>
             </div>
         );
     }
