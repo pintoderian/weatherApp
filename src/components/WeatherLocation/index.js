@@ -4,6 +4,12 @@ import WeatherData from './WeatherData';
 import { SUN, WINDY } from './../../constants/weathers';
 import './style.css';
 
+const location = "Ecuador";
+const api_key = "bfbc342dfb0ee6b54c2bd0cb5ffd0c68";
+const url_base_weather = "https://api.openweathermap.org/data/2.5/weather";
+
+const api_weather = `${url_base_weather}?q=${location}&appid=${api_key}`;
+
 const data1 = {
     temperature: 20,
     weatherState: SUN,
@@ -29,11 +35,16 @@ class WeatherLocation extends Component {
     }
 
     handleUpdateClick = () => {
+        fetch(api_weather).then(response => {
+            return response.json();
+        }).then(data => {
+            console.log(data);
+        });
+
         this.setState({
             city: 'Ecuador, Manabí!',
             data: data2
         });
-        console.log('actualizado!');
     }
 
     render = () => {
